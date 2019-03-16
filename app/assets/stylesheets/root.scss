@@ -1,0 +1,222 @@
+// Place all the styles related to the root controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background: #525659;
+}
+
+img {
+  margin: 10px auto;
+  display: block;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 35px;
+}
+
+.logo {
+  display: inline;
+  margin: 0px 10px;
+  width: 40px;
+}
+
+a {
+  color: #fd9827;
+}
+
+a:visited {
+  color: #fd9827;
+}
+
+
+.page h2 {
+  font-size: 20px;
+  margin-top: 30px;
+  white-space: pre;
+}
+
+.page p {
+  margin: 0px;
+  font-family: 'Times New Roman';
+  line-height: 13px;
+}
+
+input {
+  font-family: 'Times New Roman';
+  line-height: 13px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.intro-content p {
+  padding: 2px;
+  color: #333333;
+}
+
+.intro-content h2 {
+  margin: 0px;
+  display: inline;
+}
+
+.intro-top {
+  margin-top: 15px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.inline-link {
+  margin-left: 5px;
+}
+
+.side-box-wrapper {
+  width: 260px;
+  position: fixed;
+  left: 0px;
+}
+
+.side-box {
+  width: 50%;
+  border-radius: 3px;
+  margin: 0px auto;
+  padding: 15px 25px;
+  font-size: 20px;
+  background: white;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(43,43,43,1);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(43,43,43,1);
+  box-shadow: 0px 0px 5px 1px rgba(43,43,43,1);
+}
+
+.publish-btn {
+  margin: 10px auto;
+  background: #e6e6e6;
+  border-radius: 3px;
+  border: none;
+  padding: 5px 10px;
+  color: black;
+  font-size: 15px;
+  font-weight: 100px;
+  border: 1px solid black;
+}
+
+.publish-btn:hover {
+  background: #d9d9d9;
+  cursor: pointer;
+}
+
+.sat-amount {
+  font-size: 35px;
+}
+
+.sats {
+  margin-left: 2px;
+}
+
+.page-number {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.information {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+.word-container {
+  margin: 50px 0px;
+}
+.page {
+  background: white;
+  width: 600px;
+  padding: 80px 150px;
+  margin: 20px auto;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(43,43,43,1);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(43,43,43,1);
+  box-shadow: 0px 0px 5px 1px rgba(43,43,43,1);
+  color: black;
+  font-weight: 500;
+}
+
+.abstract {
+  font-size: 15px !important;
+  padding: 0px 50px;
+}
+
+.abstract input {
+  font-size: 15px;
+}
+
+.normal-paragraph {
+  font-size: 16px;
+}
+
+.normal-paragraph input {
+  font-size: 16px;
+}
+
+.word-wrap {
+  margin: 1px 2px;
+  padding: 2px 1px;
+  display: inline-block;
+}
+
+.input-wrap {
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  border-bottom: 3px solid black;
+}
+
+.word-wrap:hover {
+  padding: 0px 1px;
+  color: #fd9827;
+  white-space: no-wrap;
+  cursor: pointer;
+}
+
+
+.word-input {
+  text-align: center;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.number-item {
+  display: flex;
+}
+
+.number-list {
+  margin-bottom: 15px;
+}
+.number {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.publish-modal {
+  text-align: center;
+  padding: 40px 60px;
+}
+
+.publish-modal h1 {
+  margin: 0px;
+}
+
+.publish-modal h1 {
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 10px;
+}
+
+.publish-modal p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}

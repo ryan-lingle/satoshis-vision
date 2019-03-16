@@ -1,0 +1,6 @@
+---
+:concurrency: 100
+development:
+  :concurrency: 100
+production:
+  :concurrency: 100
