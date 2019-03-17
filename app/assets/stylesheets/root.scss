@@ -203,7 +203,8 @@ input:focus {
 
 .publish-modal {
   text-align: center;
-  padding: 40px 60px;
+  padding: 20px 60px;
+  width: 300px;
 }
 
 .publish-modal h1 {
@@ -219,4 +220,8 @@ input:focus {
 .publish-modal p {
   font-size: 16px;
   margin-bottom: 10px;
+}
+
+.btc-gif {
+  width: 200px;
 }

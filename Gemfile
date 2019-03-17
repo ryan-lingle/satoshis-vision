@@ -7,7 +7,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'haml-rails'
 gem 'hirb'
 gem 'oj'
-gem 'lnrpc', '~> 0.5.2'
+gem 'lnrpc', git: 'https://github.com/bumi/lnrpc.git'
 gem 'sidekiq'
 gem 'pry-rails', :group => :development
 

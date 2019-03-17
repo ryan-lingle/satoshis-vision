@@ -27,7 +27,7 @@ export default class Document extends React.Component {
       words: this.props.words,
       satoshis: 0,
       edits: [],
-      paymentRequest: null,
+      fetchInvoice: false,
     }
     this.handleChange = this.handleChange.bind(this);
     this.handlePublish = this.handlePublish.bind(this);
@@ -56,57 +56,31 @@ export default class Document extends React.Component {
 
 
   render() {
-    console.log(this.state.edits)
     return(
       <div className="container">
         <IntroModal />
         <PublishBox satoshis={this.state.satoshis} handlePublish={this.handlePublish} />
         {this.buildWords(this.state.words)}
-        <PublishModal paymentRequest={this.state.paymentRequest}  satoshis={this.state.satoshis} close={this.closeModal} />
+        <PublishModal fetchInvoice={this.state.fetchInvoice}  satoshis={this.state.satoshis} edits={this.state.edits} close={this.closeModal} paymentRecieved={this.paymentRecieved} />
       </div>
     )
   }
 
   closeModal() {
     App.invoices.unsubscribe()
-    this.setState({ paymentRequest: null })
+    this.setState({ fetchInvoice: false })
   }
 
 
 
   handlePublish(event) {
     if (this.state.satoshis > 0) {
-      const comp = this;
-      const data = {
-        edits: JSON.stringify(this.state.edits),
-      }
-      fetch('/api/v1/invoice', {
-        method: "POST",
-        mode: "cors", // no-cors, cors, *same-origin
-        credentials: "same-origin",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        redirect: "follow",
-        body: JSON.stringify(data),
-      }).then(function(response) {
-        return response.json()
-      }).then(function(res) {
-        comp.setState({ paymentRequest: res })
-        App.invoices = App.cable.subscriptions.create({ channel:'InvoicesChannel' },{
-          received: function(data) {
-            if (data.payment_request == res) {
-              comp.paymentRecieved(data.words)
-              App.invoices.unsubscribe()
-            }
-          }
-        })
-      })
+      this.setState({ fetchInvoice: true })
     }
   }
 
   paymentRecieved(newWords) {
-    this.setState({ paymentRequest: null, satoshis: 0, words: newWords })
+    this.setState({ fetchInvoice: false, satoshis: 0, words: newWords })
   }
 
 

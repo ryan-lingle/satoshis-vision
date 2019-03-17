@@ -2,19 +2,19 @@ class InvoicesWorker
   include Sidekiq::Worker
 
   def perform(args)
-    start_time = Time.now
+    start_time = args[:start_time] || Time.now
     puts 'subscribed!!'
-    si = args["settle_index"] || 15
-    request = Lnrpc::InvoiceSubscription.new(settle_index: si)
-    LnService.grpc_client.subscribe_invoices(request) do |invoice|
+    si = args[:settle_index] || 49
+    LnService.subscribe_invoices(settle_index: si) do |invoice|
+      puts 'payment received'
       si = invoice.settle_index
-      puts.invoice.payment_request
       if invoice.payment_request == args["payment_request"]
+        puts 'match'
         Word.push_edits(args["edits"])
         ActionCable.server.broadcast(
           "invoices",
           payment_request: invoice.payment_request,
-          words: Word.all.order(position: :asc)
+          words: Word.all.order(id: :asc)
         )
         return
       end
@@ -22,11 +22,13 @@ class InvoicesWorker
     end
   rescue Exception => e
     puts e.message
-    args.merge!(settle_index: si)
+    args.merge!({ settle_index: si, start_time: start_time })
     perform(args)
   end
 
   def check_time(start_time)
-    ((Time.now - start_time) / 60) > 5
+    check = ((Time.now - start_time) / 60) > 5
+    puts check
+    check
   end
 end

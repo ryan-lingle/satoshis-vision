@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/bumi/lnrpc.git
+  revision: 2b96c95c361ea142f2468c833663b799a9eeb2f2
+  specs:
+    lnrpc (0.5.2)
+      google-protobuf (>= 3.7)
+      grpc (>= 1.19.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -117,9 +125,6 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    lnrpc (0.5.2)
-      google-protobuf (>= 3.7)
-      grpc (>= 1.19.0)
     loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -258,7 +263,7 @@ DEPENDENCIES
   hirb
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
-  lnrpc (~> 0.5.2)
+  lnrpc!
   oj
   pg (>= 0.18, < 2.0)
   pry-rails
