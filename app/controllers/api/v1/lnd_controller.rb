@@ -1,4 +1,5 @@
 class Api::V1::LndController < ApplicationController
+  protect_from_forgery with: :null_session
   def invoice
     edits = JSON.parse(params[:edits])
     invoice = LnService.add_invoice(
