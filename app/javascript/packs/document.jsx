@@ -129,12 +129,12 @@ export default class Document extends React.Component {
           <div className="normal-paragraph">
             <h2>2.     Transactions</h2>
             <Paragraph words={this.state.words.slice(447, 504)} handleChangeCallback={this.handleChange} />
-            <img src={first} alt="chart" width={'400px'}/>
+            <img src={first} alt="chart" width={'360px'}/>
             <Paragraph words={this.state.words.slice(504, 605)} handleChangeCallback={this.handleChange}  indent={true} />
             <Paragraph words={this.state.words.slice(605, 733)} handleChangeCallback={this.handleChange}  indent={true} />
             <h2>3.     Timestamp Server</h2>
             <Paragraph words={this.state.words.slice(733, 813)} handleChangeCallback={this.handleChange}  indent={true} />
-            <img src={second} alt="chart" width={'400px'}/>
+            <img src={second} alt="chart" width={'360px'}/>
           </div>
           <div className="page-number">2</div>
         </div>
@@ -143,7 +143,7 @@ export default class Document extends React.Component {
             <h2>4.     Proof-of-Work</h2>
             <Paragraph words={this.state.words.slice(813, 888)} handleChangeCallback={this.handleChange}  />
             <Paragraph words={this.state.words.slice(888, 960)} handleChangeCallback={this.handleChange}  indent={true} />
-            <img src={third} alt="chart" width={'400px'}/>
+            <img src={third} alt="chart" width={'360px'}/>
             <Paragraph words={this.state.words.slice(960, 1090)} handleChangeCallback={this.handleChange} indent={true} />
             <Paragraph words={this.state.words.slice(1090, 1129)} handleChangeCallback={this.handleChange} indent={true} />
             <h2>5.     Network</h2>
@@ -173,7 +173,7 @@ export default class Document extends React.Component {
             <Paragraph words={this.state.words.slice(1520, 1605)} handleChangeCallback={this.handleChange} indent={true} />
             <h2>7.     Reclaiming Disk Space</h2>
             <Paragraph words={this.state.words.slice(1605, 1676)} handleChangeCallback={this.handleChange} />
-            <img src={fourth} alt="chart" width={'400px'}/>
+            <img src={fourth} alt="chart" width={'360px'}/>
             <Paragraph words={this.state.words.slice(1676, 1746)} handleChangeCallback={this.handleChange} indent={true} />
             <div className="page-number">4</div>
           </div>
@@ -182,11 +182,11 @@ export default class Document extends React.Component {
           <div className="normal-paragraph">
             <h2>8.     Simplified Payment Verification</h2>
             <Paragraph words={this.state.words.slice(1746, 1844)} handleChangeCallback={this.handleChange} />
-            <img src={fifth} alt="chart" width={'600px'}/>
+            <img src={fifth} alt="chart" width={'540px'}/>
             <Paragraph words={this.state.words.slice(1844, 1958)} handleChangeCallback={this.handleChange} indent={true} />
             <h2>9.     Combined and Splitting Value</h2>
             <Paragraph words={this.state.words.slice(1958, 2035)} handleChangeCallback={this.handleChange} />
-            <img src={sixth} alt="chart" width={'300px'}/>
+            <img src={sixth} alt="chart" width={'270px'}/>
             <Paragraph words={this.state.words.slice(2035, 2075)} handleChangeCallback={this.handleChange} indent={true} />
             <div className="page-number">5</div>
           </div>
@@ -195,13 +195,13 @@ export default class Document extends React.Component {
           <div className="normal-paragraph">
             <h2>10.     Privacy</h2>
             <Paragraph words={this.state.words.slice(2075, 2181)} handleChangeCallback={this.handleChange} />
-            <img src={seventh} alt="chart" width={'500px'}/>
+            <img src={seventh} alt="chart" width={'450px'}/>
             <Paragraph words={this.state.words.slice(2181, 2248)} handleChangeCallback={this.handleChange} indent={true} />
             <h2>11.     Calculations</h2>
             <Paragraph words={this.state.words.slice(2248, 2338)} handleChangeCallback={this.handleChange} />
             <Paragraph words={this.state.words.slice(2338, 2391)} handleChangeCallback={this.handleChange} indent={true} />
             <Paragraph words={this.state.words.slice(2391, 2455)} handleChangeCallback={this.handleChange} indent={true} />
-            <img src={eighth} alt="chart" width={'550px'}/>
+            <img src={eighth} alt="chart" width={'500px'}/>
             <div className="page-number">6</div>
           </div>
         </div>
@@ -211,22 +211,22 @@ export default class Document extends React.Component {
             <Paragraph words={this.state.words.slice(2504, 2578)} handleChangeCallback={this.handleChange} indent={true} />
             <Paragraph words={this.state.words.slice(2578, 2654)} handleChangeCallback={this.handleChange} indent={true} />
             <Paragraph words={this.state.words.slice(2654, 2710)} handleChangeCallback={this.handleChange} indent={true} />
-            <img src={ninth} alt="chart" width={'550px'}/>
+            <img src={ninth} alt="chart" width={'500px'}/>
             <Paragraph words={this.state.words.slice(2710, 2745)} handleChangeCallback={this.handleChange} />
-            <img src={tenth} alt="chart" width={'550px'}/>
+            <img src={tenth} alt="chart" width={'500px'}/>
             <Paragraph words={this.state.words.slice(2745, 2755)} handleChangeCallback={this.handleChange} />
             <img src={eleventh} alt="chart" width={'550px'}/>
             <Paragraph words={this.state.words.slice(2755, 2759)} handleChangeCallback={this.handleChange} />
-            <img src={twelfth} alt="chart" width={'550px'}/>
+            <img src={twelfth} alt="chart" width={'500px'}/>
             <div className="page-number">7</div>
           </div>
         </div>
         <div className="page">
           <div className="normal-paragraph">
             <Paragraph words={this.state.words.slice(2759, 2772)} handleChangeCallback={this.handleChange} />
-            <img src={thirteenth} alt="chart" width={'550px'}/>
+            <img src={thirteenth} alt="chart" width={'500px'}/>
             <Paragraph words={this.state.words.slice(2772, 2778)} handleChangeCallback={this.handleChange} />
-            <img src={fourteenth} alt="chart" width={'550px'}/>
+            <img src={fourteenth} alt="chart" width={'500px'}/>
             <h2>12.     Conclusion</h2>
             <Paragraph words={this.state.words.slice(2778, 2957)} handleChangeCallback={this.handleChange} />
           </div>

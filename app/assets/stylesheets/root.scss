@@ -12,10 +12,10 @@ img {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 35px;
+  margin-top: 45px;
+  margin-bottom: 32px;
 }
 
 .logo {
@@ -37,20 +37,20 @@ a:visited {
 }
 
 .page h2 {
-  font-size: 20px;
-  margin-top: 30px;
+  font-size: 18px;
+  margin-top: 27px;
   white-space: pre;
 }
 
 .page p {
   margin: 0px;
   font-family: 'Times New Roman';
-  line-height: 13px;
+  line-height: 10px;
 }
 
 input {
   font-family: 'Times New Roman';
-  line-height: 13px;
+  line-height: 10px;
   margin: 0px;
   padding: 0px;
 }
@@ -77,15 +77,15 @@ input {
 }
 
 .side-box {
-  left: 25px;
-  width: 130px;
-  height: 100px;
+  left: 22px;
+  width: 117px;
+  height: 90px;
   position: fixed;
-  top: 70px;
+  top: 63px;
   border-radius: 3px;
   margin: 0px auto;
   padding: 15px 25px;
-  font-size: 20px;
+  font-size: 18px;
   background: white;
   text-align: center;
   -webkit-box-shadow: 0px 0px 5px 1px rgba(43,43,43,1);
@@ -100,7 +100,7 @@ input {
   border: none;
   padding: 5px 10px;
   color: black;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 100px;
   border: 1px solid black;
 }
@@ -125,17 +125,17 @@ input {
 
 .information {
   text-align: center;
-  font-size: 15px;
-  margin-bottom: 40px;
+  font-size: 14px;
+  margin-bottom: 36px;
 }
 .word-container {
-  margin: 50px auto;
-  width: 900px;
+  margin: 45px auto;
+  width: 815px;
 }
 .page {
   background: white;
-  padding: 80px 150px;
-  margin: 20px auto;
+  padding: 72px 135px;
+  margin: 18px auto;
   -webkit-box-shadow: 0px 0px 5px 1px rgba(43,43,43,1);
   -moz-box-shadow: 0px 0px 5px 1px rgba(43,43,43,1);
   box-shadow: 0px 0px 5px 1px rgba(43,43,43,1);
@@ -144,20 +144,16 @@ input {
 }
 
 .abstract {
-  font-size: 15px !important;
+  font-size: 12px !important;
   padding: 0px 50px;
 }
 
-.abstract input {
-  font-size: 15px;
-}
-
 .normal-paragraph {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .normal-paragraph input {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .word-wrap {
