@@ -32,6 +32,9 @@ a:visited {
   color: #fd9827;
 }
 
+.text-center {
+  text-align: center;
+}
 
 .page h2 {
   font-size: 20px;
@@ -73,14 +76,12 @@ input {
   margin-left: 5px;
 }
 
-.side-box-wrapper {
-  width: 260px;
-  position: fixed;
-  left: 0px;
-}
-
 .side-box {
-  width: 50%;
+  left: 25px;
+  width: 130px;
+  height: 100px;
+  position: fixed;
+  top: 70px;
   border-radius: 3px;
   margin: 0px auto;
   padding: 15px 25px;
@@ -128,11 +129,11 @@ input {
   margin-bottom: 40px;
 }
 .word-container {
-  margin: 50px 0px;
+  margin: 50px auto;
+  width: 900px;
 }
 .page {
   background: white;
-  width: 600px;
   padding: 80px 150px;
   margin: 20px auto;
   -webkit-box-shadow: 0px 0px 5px 1px rgba(43,43,43,1);
@@ -203,8 +204,8 @@ input:focus {
 
 .publish-modal {
   text-align: center;
-  padding: 20px 60px;
-  width: 300px;
+  padding: 20px 0px;
+  width: 400px;
 }
 
 .publish-modal h1 {
@@ -215,13 +216,57 @@ input:focus {
   margin-top: 0px;
   padding-top: 0px;
   margin-bottom: 10px;
+  font-size: 30px;
 }
 
 .publish-modal p {
-  font-size: 16px;
+  font-size: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .btc-gif {
   width: 200px;
+}
+
+.payment-request {
+  width: 250px;
+  border-radius: 3px;
+  font-size: 16px;
+  margin-top: 15px;
+  padding: 2px 0px;
+}
+
+.price {
+  font-size: 18px;
+}
+
+.copy-btn {
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: #fd9827;
+  color: white;
+  margin-left: 8px;
+}
+
+.modal-bottom {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.modal-bottom span {
+  margin-right: 5px;
+
+}
+
+.modal-bottom button {
+  padding: 4px 8px;
+  border-radius: 3px;
+  background: #e6e6e6;
+  font-weight: bold;
+}
+
+.modal-bottom button:hover {
+  background: #d9d9d9;
+  cursor: pointer;
 }

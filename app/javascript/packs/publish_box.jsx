@@ -4,13 +4,11 @@ import { faBolt } from '@fortawesome/free-solid-svg-icons'
 
 const PublishBox = (props) => {
   return(
-    <div className="side-box-wrapper">
-      <div className="side-box">
-        <div>
-          <span className="sat-amount">{commafy(props.satoshis)}</span>
-          <span className="sats">sats</span>
-          <div><button className="publish-btn" onClick={props.handlePublish} >⚡ Publish ⚡</button></div>
-        </div>
+    <div className="side-box">
+      <div>
+        <span className="sat-amount">{commafy(props.satoshis)}</span>
+        <span className="sats">sats</span>
+        <div><button className="publish-btn" onClick={props.handlePublish} >⚡ Publish ⚡</button></div>
       </div>
     </div>
   )
