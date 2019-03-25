@@ -28,7 +28,6 @@ class InvoicesWorker
 
   def check_time(start_time)
     check = ((Time.now - start_time) / 60) > 5
-    puts check
     check
   end
 end
