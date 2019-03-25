@@ -3,6 +3,9 @@ class Api::V1::LndController < ApplicationController
 
   def invoice
     edits = JSON.parse(params[:edits])
+
+
+
     invoice = LnService.add_invoice(
       memo: "Editing the Vision",
       value: edits.size * 100,
