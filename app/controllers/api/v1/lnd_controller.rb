@@ -6,8 +6,12 @@ class Api::V1::LndController < ApplicationController
 
     value = edits.size * 100
 
-    invoice_request = Lnrpc::Invoice.new({ memo: "Editing the Vision", value: value, expiry: 300 })
-    invoice = LnService.grpc_client.add_invoice(invoice_request)
+
+    invoice = LnService.add_invoice({
+      memo: "Editing the Vision",
+      value: value,
+      expiry: 300
+    })
 
     InvoicesWorker.perform_async(
       payment_request: invoice.payment_request,
