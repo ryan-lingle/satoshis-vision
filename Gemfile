@@ -6,6 +6,7 @@ ruby '2.4.4'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'haml-rails'
 gem 'hirb'
+gem 'devise'
 gem 'oj'
 gem 'lnrpc', git: 'https://github.com/bumi/lnrpc.git'
 gem 'sidekiq'

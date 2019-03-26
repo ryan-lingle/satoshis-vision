@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
-  mount ActionCable.server => '/cable'
-  root to: 'root#root'
+  devise_for :users
   require 'sidekiq/web'
-  mount Sidekiq::Web => '/sidekiq'
+
+  mount ActionCable.server => '/cable'
+
+  root to: 'root#root'
+
+  authenticate :user do
+    mount Sidekiq::Web => '/sidekiq'
+  end
+
   namespace 'api' do
     namespace 'v1' do
       resources :words, only: [:index, :update]
