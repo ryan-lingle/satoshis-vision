@@ -1,6 +1,6 @@
 ---
-:concurrency: 49
+:concurrency: 48
 development:
-  :concurrency: 49
+  :concurrency: 48
 production:
-  :concurrency: 49
+  :concurrency: 48
