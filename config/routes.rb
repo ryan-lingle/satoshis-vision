@@ -16,4 +16,7 @@ Rails.application.routes.draw do
       post '/invoice', to: 'lnd#invoice'
     end
   end
+
+   get "/404", to: "errors#not_found"
+   get "/500", to: "errors#internal_error"
 end
