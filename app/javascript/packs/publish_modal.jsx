@@ -122,6 +122,7 @@ export default class PublishModal extends React.Component {
         onRequestClose={this.close}
         style={customStyles}
       >
+        <button className="close-modal publish-close fa fa-times-circle" onClick={this.close}></button>
         <div className="publish-modal">
           {modalBody}
         </div>

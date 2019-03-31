@@ -99,6 +99,8 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.10.0)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     google-protobuf (3.7.0)
@@ -273,6 +275,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   dotenv-rails
+  font-awesome-rails
   haml-rails
   hirb
   jbuilder (~> 2.5)

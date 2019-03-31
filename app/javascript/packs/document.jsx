@@ -58,7 +58,7 @@ export default class Document extends React.Component {
   render() {
     return(
       <div className="container">
-        <IntroModal />
+        <IntroModal show={document.cookie != "true"} />
         <PublishBox satoshis={this.state.satoshis} handlePublish={this.handlePublish} />
         {this.buildWords(this.state.words)}
         <PublishModal fetchInvoice={this.state.fetchInvoice}  satoshis={this.state.satoshis} edits={this.state.edits} close={this.closeModal} paymentRecieved={this.paymentRecieved} />

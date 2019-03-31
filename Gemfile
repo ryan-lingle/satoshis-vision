@@ -10,6 +10,7 @@ gem 'devise'
 gem 'oj'
 gem 'lnrpc', git: 'https://github.com/bumi/lnrpc.git'
 gem 'sidekiq'
+gem 'font-awesome-rails'
 gem 'pry-rails', :group => :development
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

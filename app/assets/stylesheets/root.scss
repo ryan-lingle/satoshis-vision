@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "font-awesome";
+
 body {
   background: #525659;
 }
@@ -30,6 +32,32 @@ a {
 
 a:visited {
   color: #fd9827;
+}
+
+.close-modal {
+  float: right;
+
+  border: none;
+  font-size: 20px;
+  color: #333333;
+}
+
+.intro-close {
+  margin-top: -20px;
+  margin-right: -45px;
+}
+
+.publish-close {
+  margin-right: -5px;
+}
+
+.close-modal:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.close-modal:focus {
+  outline: none;
 }
 
 .text-center {
@@ -146,6 +174,10 @@ input {
 .abstract {
   font-size: 13px !important;
   padding: 0px 50px;
+}
+
+.abstract input {
+  font-size: 13px !important;
 }
 
 .normal-paragraph {
