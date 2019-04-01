@@ -32,41 +32,49 @@ export default class IntroModal extends React.Component {
     this.setState({ open: false })
   }
 
+
+  open = () => {
+    this.setState({ open: true })
+  }
+
   render() {
     return(
-      <Modal
-        isOpen={this.props.show && this.state.open}
-        onRequestClose={this.close}
-        style={customStyles}
-      >
-        <button className="close-modal intro-close fa fa-times-circle" onClick={this.close}></button>
-        <div className="intro-content">
-          <div className="intro-top" ><img className="logo" src={Logo1}/><h2>Welcome to Satoshi's Vision&trade;</h2><img className="logo" src={Logo1}/></div>
-          <div className="text-center">By <a href="https://twitter.com/i_amm_nobody">Chef Nobody</a></div>
-          <p>
-            What is is this? Well for starters its
-            definitely not affiliated Bitcoin SV.
-          </p>
-          <p>
-            Inspired by
-            <a className="inline-link" href="https://satoshis.place/">Satoshi's Place</a>,
-            <strong> Satoshi's Vision&trade;</strong> is a place where Bitcoiners
-            can put their Sats where their mouth is and make an edit
-            to the sacred text itself, the Bitcoin White-Paper.
-          </p>
-          <p><strong>
-            The rules are simple: 100 Sats per edited word.
-          </strong></p>
-          <p>
-            Having delusions of being the one true profit of Satoshi's Vision?
-            Vent it all out here and spare yourself from creating yet another
-            useless Bitcoin fork that will certainly go to zero.
-          </p>
-          <p>
-            Please nothing too blasphemous. He might be watching...
-          </p>
-        </div>
-      </Modal>
+      <div>
+        <div className="intro-btn fa fa-question-circle" onClick={this.open}></div>
+        <Modal
+          isOpen={this.props.show && this.state.open}
+          onRequestClose={this.close}
+          style={customStyles}
+        >
+          <button className="close-modal intro-close fa fa-times-circle" onClick={this.close}></button>
+          <div className="intro-content">
+            <div className="intro-top" ><img className="logo" src={Logo1}/><h2>Welcome to Satoshi's Vision&trade;</h2><img className="logo" src={Logo1}/></div>
+            <div className="text-center">By <a href="https://twitter.com/i_amm_nobody">Chef Nobody</a></div>
+            <p>
+              What is is this? Well for starters its
+              definitely not affiliated BSV.
+            </p>
+            <p>
+              Inspired by
+              <a className="inline-link" href="https://satoshis.place/">Satoshi's Place</a>,
+              <strong> Satoshi's Vision&trade;</strong> is a place where Bitcoiners
+              can put their Sats where their mouth is and make an edit
+              to the sacred text itself, the Bitcoin White-Paper.
+            </p>
+            <p><strong>
+              The rules are simple: 100 Sats per edited word.
+            </strong></p>
+            <p>
+              Having delusions of being the one true profit of Satoshi's Vision?
+              Vent it all out here and spare yourself from creating yet another
+              useless Bitcoin fork that will certainly go to zero.
+            </p>
+            <p>
+              Please nothing too blasphemous. He might be watching...
+            </p>
+          </div>
+        </Modal>
+      </div>
     )
   }
 }

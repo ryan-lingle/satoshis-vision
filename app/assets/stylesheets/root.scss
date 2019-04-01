@@ -121,6 +121,27 @@ input {
   box-shadow: 0px 0px 5px 1px rgba(43,43,43,1);
 }
 
+.intro-btn {
+  font-size: 20px;
+  position: fixed;
+  top: 195px;
+  left: 22px;
+  background: white;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(43,43,43,1);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(43,43,43,1);
+  box-shadow: 0px 0px 5px 1px rgba(43,43,43,1);
+  width: 167px;
+  padding: 5px 0px;
+  border-radius: 3px;
+  color: #525659;
+}
+
+.intro-btn:hover {
+  color: black;
+  cursor: pointer;
+}
+
 .publish-btn {
   margin: 10px auto;
   background: #e6e6e6;
