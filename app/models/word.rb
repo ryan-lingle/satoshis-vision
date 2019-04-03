@@ -10,6 +10,7 @@ class Word < ApplicationRecord
   def self.push_edits(edits)
     edits.each do |edit|
       word = self.find(edit["id"])
+      Edit.create(former: word.text, new: edit["text"], word_id: edit["id"])
       word.text = edit["text"]
       word.save
     end

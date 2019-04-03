@@ -1,0 +1,7 @@
+.admin-wrapper
+  %h1
+    Total:
+    = @count
+  - @edits.each do |edit|
+    %h3
+      = "ID: #{edit.word_id} | #{edit.former} --> #{edit.new}"
