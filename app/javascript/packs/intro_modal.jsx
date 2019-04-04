@@ -1,7 +1,6 @@
 import React from 'react'
 import Modal from 'react-modal';
-import Logo1 from './images/logo1.png';
-import Logo2 from './images/logo2.png';
+import imageHelper from './image_helper';
 Modal.setAppElement('#root-target')
 
 const customStyles = {
@@ -48,7 +47,7 @@ export default class IntroModal extends React.Component {
         >
           <button className="close-modal intro-close fa fa-times-circle" onClick={this.close}></button>
           <div className="intro-content">
-            <div className="intro-top" ><img className="logo" src={Logo1}/><h2>Welcome to Satoshi's Vision&trade;</h2><img className="logo" src={Logo1}/></div>
+            <div className="intro-top" ><img className="logo" src={imageHelper('logo1')}/><h2>Welcome to Satoshi's Vision&trade;</h2><img className="logo" src={imageHelper('logo1')}/></div>
             <div className="text-center">By <a href="https://twitter.com/i_amm_nobody">Chef Nobody</a></div>
             <p>
               What is is this? Well for starters its

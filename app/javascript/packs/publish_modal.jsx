@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import QRCode from 'qrcode.react'
-import BtcGif from './images/btc.gif'
+import imageHelper from './image_helper'
 
 const nodeUri = '02a024ef71b7cace623160f2bf45c8e7080b222ac8019eac3dbfa1ff2ecd629c78@170.75.163.230:9735';
 
@@ -113,7 +113,7 @@ export default class PublishModal extends React.Component {
   }
 
   render() {
-    const invoice = this.state.invoice ? this.buildInvoice() : <img className="btc-gif" src={BtcGif}/>;
+    const invoice = this.state.invoice ? this.buildInvoice() : <img className="btc-gif" src={imageHelper('btc', 'gif')}/>;
     const nodeStuff = this.buildNodeInfo();
     const modalBody = this.state.node ? nodeStuff : invoice;
     return(

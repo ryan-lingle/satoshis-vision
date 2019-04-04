@@ -173,11 +173,3 @@ them. Any needed rules and incentives can be enforced with this consensus mechan
   Word.create!(text: w)
 end
 
-# macaroon = "0201036c6e640247030a10192f28fccaf5a39989dc6663b723611c1201301a160a0761646472657373120472656164120577726974651a170a08696e766f6963657312047265616412057772697465000006200512675cec4639e10f0b22191b4f7ccc3bb111a2692a4329d130528d659959c5"
-# request = request = Lnrpc::ListInvoiceRequest.new
-# lnd = Lnrpc::Client.new(macaroon: macaroon, address: 'btcpay212359.lndyn.com:443', credentials: nil)
-
-# lnd.grpc_client.list_invoices(request).invoices.each do |invoice|
-#   puts invoice.add_index
-# end
-
