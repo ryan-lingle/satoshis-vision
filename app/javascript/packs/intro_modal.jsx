@@ -22,7 +22,7 @@ export default class IntroModal extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      open: true
+      open: this.props.show
     }
   }
 
@@ -41,7 +41,7 @@ export default class IntroModal extends React.Component {
       <div>
         <div className="intro-btn fa fa-question-circle" onClick={this.open}></div>
         <Modal
-          isOpen={this.props.show && this.state.open}
+          isOpen={this.state.open}
           onRequestClose={this.close}
           style={customStyles}
         >

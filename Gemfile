@@ -12,8 +12,6 @@ gem 'lnrpc', git: 'https://github.com/bumi/lnrpc.git'
 gem 'sidekiq'
 gem 'font-awesome-rails'
 gem 'pry-rails', :group => :development
-gem 'carrierwave'
-gem 'cloudinary'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
