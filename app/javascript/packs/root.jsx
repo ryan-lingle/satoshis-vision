@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import Document from './document'
 
 const Root = (props) => (
+  console.log('root component loaded')
   <Document {...props} />
 )
 
