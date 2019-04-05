@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Document from './document'
 
+console.log('root component loaded')
 const Root = (props) => (
-  console.log('root component loaded')
   <Document {...props} />
 )
 
