@@ -4,7 +4,6 @@ import Word from './word'
 export default class Paragraph extends React.Component {
   constructor(props) {
     super(props)
-    console.log('hi')
     this.state = {
       words: this.props.words
     }

@@ -54,7 +54,6 @@ export default class PublishModal extends React.Component {
       comp.setState({ invoice: res.invoice })
       App.invoices = App.cable.subscriptions.create({ channel:'InvoicesChannel' },{
         received: function(data) {
-          console.log(data.payment_request)
           if (data.payment_request == res.invoice) {
             comp.props.paymentRecieved(data.words)
             App.invoices.unsubscribe()
