@@ -1,5 +1,15 @@
 class RootController < ApplicationController
   def root
-    @words = Oj.dump(Word.all.order(id: :asc).as_json)
+
+    @words = Oj.dump(get_words.as_json)
+  end
+
+  def get_words
+    Word.all.order(id: :asc).map do |w|
+      {
+        id: w.id,
+        text: w.text
+      }
+    end
   end
 end
