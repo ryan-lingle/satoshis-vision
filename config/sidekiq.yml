@@ -1,6 +1,0 @@
----
-:concurrency: 25
-development:
-  :concurrency: 25
-production:
-  :concurrency: 25

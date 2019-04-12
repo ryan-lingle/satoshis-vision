@@ -1,16 +1,14 @@
-class InvoicesWorker
-  include Sidekiq::Worker
+class InvoiceSubscriber
+  include Concurrent::Async
 
-  def perform(args)
+  def subscribe(args)
     start_time = args[:start_time] || Time.now
-    puts 'subscribed!!'
     si = args[:settle_index] || 49
     LnService.subscribe_invoices(settle_index: si) do |invoice|
-      puts 'payment received'
       si = invoice.settle_index
-      if invoice.payment_request == args["payment_request"]
-        puts 'match'
-        Word.push_edits(args["edits"])
+      if invoice.payment_request == args[:payment_request]
+        puts 'payment received'
+        Word.push_edits(args[:edits])
         ActionCable.server.broadcast(
           "invoices",
           payment_request: invoice.payment_request,

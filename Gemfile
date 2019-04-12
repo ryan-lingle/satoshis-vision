@@ -8,9 +8,9 @@ gem 'haml-rails'
 gem 'hirb'
 gem 'devise'
 gem 'rollbar'
+gem 'concurrent-ruby', require: 'concurrent'
 gem 'oj'
 gem 'lnrpc', git: 'https://github.com/bumi/lnrpc.git'
-gem 'sidekiq'
 gem 'font-awesome-rails'
 gem 'pry-rails', :group => :development
 

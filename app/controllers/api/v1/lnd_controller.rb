@@ -13,7 +13,7 @@ class Api::V1::LndController < ApplicationController
       expiry: 300
     })
 
-    InvoicesWorker.perform_async(
+    InvoiceSubscriber.new.async.subscribe(
       payment_request: invoice.payment_request,
       edits: edits
     )
