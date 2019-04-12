@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-  require 'sidekiq/web'
 
   mount ActionCable.server => '/cable'
 
   root to: 'root#root'
 
   authenticate :user do
-    mount Sidekiq::Web => '/sidekiq'
     get 'admin', to: 'admin#edits'
   end
 

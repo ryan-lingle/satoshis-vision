@@ -1,1 +1,0 @@
-invoiceworker: bundle exec sidekiq
