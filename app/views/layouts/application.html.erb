@@ -2,7 +2,12 @@
 <html>
   <head>
     <title>Satoshis Vision</title>
-    <meta name="twitter:image" content="https://s3.us-east-2.amazonaws.com/toshi-vision-assets/Screen+Shot+2019-04-13+at+12.03.54+PM.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
+    <meta name="twitter:title" content="<%= meta_title %>">
+    <meta name="twitter:description" content="<%= meta_description %>">
+    <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
+    <meta name="twitter:image:src" content="<%= meta_image %>">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= action_cable_meta_tag %>
