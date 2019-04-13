@@ -50,8 +50,8 @@ export default class IntroModal extends React.Component {
             <div className="intro-top" ><img className="logo" src={imageHelper('logo1')}/><h2>Welcome to Satoshi's Vision&trade;</h2><img className="logo" src={imageHelper('logo1')}/></div>
             <div className="text-center">By <a href="https://twitter.com/i_amm_nobody">Chef Nobody</a></div>
             <p>
-              What is is this? Well for starters its
-              definitely not affiliated with BSV.
+              What is is this? Well for starters, it's
+              certainly not affiliated with the <strong>Fraudulant</strong> Craig Wright.
             </p>
             <p>
               Inspired by
