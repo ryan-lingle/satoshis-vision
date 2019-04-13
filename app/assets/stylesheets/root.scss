@@ -25,6 +25,30 @@ h1 {
   margin-bottom: 32px;
 }
 
+.flash {
+  background: #fd9827;
+  color: white;
+  width: 785px;
+  margin: 0px auto;
+  padding: 10px 0px 10px 30px;
+  font-size: 17px;
+  position: sticky;
+  top: 0px;
+  text-align: center;
+}
+
+.close-flash {
+  font-size: 20px;
+  color: white;
+  float: right;
+  margin-right: 15px;
+}
+
+.close-flash:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .logo {
   display: inline;
   margin: 0px 10px;

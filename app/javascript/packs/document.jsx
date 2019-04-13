@@ -13,14 +13,11 @@ export default class Document extends React.Component {
       satoshis: 0,
       edits: [],
       fetchInvoice: false,
+      flash: false,
     }
-    this.handleChange = this.handleChange.bind(this);
-    this.handlePublish = this.handlePublish.bind(this);
-    this.paymentRecieved = this.paymentRecieved.bind(this);
-    this.closeModal = this.closeModal.bind(this);
   }
 
-  handleChange(position, value, id) {
+  handleChange = (position, value, id) => {
     this.setState((prevState) => {
       const newEdits = prevState.edits
       let newSatoshis = prevState.satoshis
@@ -39,11 +36,24 @@ export default class Document extends React.Component {
     })
   }
 
+  closeFlash = () => {
+    this.setState({ flash: false })
+  }
+
+  buildFlash = () => {
+    return(
+      <div className="flash">
+        <div className="close-flash fa fa-times" onClick={this.closeFlash} ></div>
+        <div>Your Edit Has Been Successfully Published.</div>
+      </div>
+    )
+  }
 
   render() {
     return(
       <div className="container">
-        <IntroModal show={document.cookie != "true"} />
+        {this.state.flash ? this.buildFlash() : null}
+        <IntroModal show={!document.cookie.includes("true")} />
         <PublishBox satoshis={this.state.satoshis} handlePublish={this.handlePublish} />
         {this.buildWords(this.state.words)}
         <PublishModal fetchInvoice={this.state.fetchInvoice}  satoshis={this.state.satoshis} edits={this.state.edits} close={this.closeModal} paymentRecieved={this.paymentRecieved} />
@@ -51,21 +61,21 @@ export default class Document extends React.Component {
     )
   }
 
-  closeModal() {
+  closeModal = () => {
     App.invoices.unsubscribe()
     this.setState({ fetchInvoice: false })
   }
 
 
 
-  handlePublish(event) {
+  handlePublish = (event) => {
     if (this.state.satoshis > 0) {
       this.setState({ fetchInvoice: true })
     }
   }
 
-  paymentRecieved(newWords) {
-    this.setState({ fetchInvoice: false, satoshis: 0, words: newWords })
+  paymentRecieved = (newWords) => {
+    this.setState({ fetchInvoice: false, satoshis: 0, words: newWords, flash: true })
   }
 
 
@@ -87,7 +97,7 @@ export default class Document extends React.Component {
 
 
 
-  buildWords(words) {
+  buildWords = (words) => {
     return(
       <div className="word-container">
         <div className="page">
