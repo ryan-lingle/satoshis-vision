@@ -12,6 +12,7 @@ class Word < ApplicationRecord
       word = self.find(edit["id"])
       Edit.create(former: word.text, new: edit["text"], word_id: edit["id"])
       word.text = edit["text"]
+      word.edited = true
       word.save
     end
   end

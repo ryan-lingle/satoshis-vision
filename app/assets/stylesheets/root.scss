@@ -241,6 +241,11 @@ input {
   font-size: 14px;
 }
 
+.edited {
+  border-bottom: #fd9827 1px solid;
+  margin: 1px 2px 0px 2px;
+}
+
 .word-wrap {
   margin: 1px 2px;
   padding: 2px 1px;
@@ -255,9 +260,7 @@ input {
 }
 
 .word-wrap:hover {
-  padding: 0px 1px;
   color: #fd9827;
-  white-space: no-wrap;
   cursor: pointer;
 }
 

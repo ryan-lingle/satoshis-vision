@@ -7,7 +7,8 @@ class Api::V1::WordsController < ApplicationController
     Word.all.order(id: :asc).map do |w|
       {
         id: w.id,
-        text: w.text
+        text: w.text,
+        edited: w.edited,
       }
     end
   end

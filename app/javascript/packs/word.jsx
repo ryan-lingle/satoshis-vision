@@ -4,7 +4,8 @@ export default class Word extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      text: this.props.text
+      text: this.props.text,
+      edited: this.props.edited
     }
     this.handleChange = this.handleChange.bind(this)
   }
@@ -13,7 +14,7 @@ export default class Word extends React.Component {
     const data = event.nativeEvent.data
     const val = event.target.value
     if (this.validate(data)) {
-      this.setState({ text: val })
+      this.setState({ text: val, edited: true })
     }
   }
 
@@ -43,7 +44,7 @@ export default class Word extends React.Component {
     } else {
       return(
         <span
-          className="word-wrap"
+          className={`word-wrap ${this.state.edited ? 'edited' : null}`}
           key={this.props.id}
           id={this.props.id}
           position={this.props.index}
