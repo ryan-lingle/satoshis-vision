@@ -18,7 +18,7 @@ class Word < ApplicationRecord
   end
 
   def validate_text
-    unless text != '' && check(text)
+    unless text != '' && check(text) && text.length < 18
       errors.add(:text, 'invalid')
     end
   end

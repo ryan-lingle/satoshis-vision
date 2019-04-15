@@ -13,7 +13,7 @@ export default class Word extends React.Component {
   handleChange(event) {
     const data = event.nativeEvent.data
     const val = event.target.value
-    if (this.validate(data)) {
+    if (this.validate(data) && !(val.length > 18)) {
       this.setState({ text: val, edited: true })
     }
   }
