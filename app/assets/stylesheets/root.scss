@@ -25,6 +25,22 @@ h1 {
   margin-bottom: 32px;
 }
 
+.joule-btn {
+  background: #7642FF;
+  display: block;
+  color: white;
+  margin: 0px auto;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  padding: 4px 8px;
+}
+
+.joule-btn:hover {
+  background: #9a6bff;
+  cursor: pointer;
+}
+
 .flash {
   background: #fd9827;
   color: white;

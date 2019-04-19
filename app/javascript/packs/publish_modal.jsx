@@ -1,4 +1,6 @@
 import React from 'react';
+import { requestProvider } from 'webln'
+
 import Modal from 'react-modal';
 import QRCode from 'qrcode.react'
 import imageHelper from './image_helper'
@@ -68,6 +70,7 @@ export default class PublishModal extends React.Component {
       <div className="invoice-wrapper">
         <h1>Pay to Publish</h1>
         <p className="price">Price: <strong>{this.props.satoshis} sats</strong></p>
+        <button className="joule-btn" onClick={this.webln}>Pay with Joule</button>
         <QRCode value={this.state.invoice} size={200}/>
         <br></br>
         <input className="payment-request" id="payment-request" value={this.state.invoice} readOnly={true} />
@@ -77,6 +80,12 @@ export default class PublishModal extends React.Component {
         </div>
       </div>
     )
+  }
+
+  webln = () => {
+    requestProvider().then((webln) => {
+      webln.sendPayment(this.state.invoice)
+    })
   }
 
   copy = (id) => {

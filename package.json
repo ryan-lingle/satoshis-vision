@@ -14,7 +14,8 @@
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-modal": "^3.8.1",
-    "react-spinners": "^0.5.1"
+    "react-spinners": "^0.5.1",
+    "webln": "^0.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
