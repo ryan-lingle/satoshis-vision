@@ -4,8 +4,6 @@ Check out the Lapp @ [toshi.vision](https://www.toshi.vision/)
 
 What is is this?
 ----------------
-Well for starters, it's certainly not affiliated with the Fraudulant Craig Wright.
-
 Inspired by [Satoshi's Place](https://satoshis.place/), Satoshi's Vision™ is a place where Bitcoiners can put their Sats where their mouth is and make an edit to the sacred text itself, the Bitcoin White-Paper.
 
 The rules are simple: 100 Sats per edited word.
